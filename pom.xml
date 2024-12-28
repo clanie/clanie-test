@@ -1,55 +1,58 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>dk.clanie</groupId>
 		<artifactId>clanie-parent-pom</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>clanie-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 
 	<name>clanie-test</name>
 	<packaging>jar</packaging>
 	<description>Test Helpers</description>
 	<inceptionYear>2012</inceptionYear>
 
-	<url>https://github.com/clanie/money</url>
+	<url>https://github.com/clanie/clanie-test</url>
 
 	<scm>
-		<connection>scm:git:ssh:git@github.com:clanie/money.git</connection>
-		<url>https://github.com/clanie/money</url>
+		<connection>scm:git:ssh:git@github.com:clanie/clanie-test.git</connection>
+		<url>https://github.com/clanie/clanie-test</url>
 	</scm>
 
-<!--
-	<distributionManagement>
-		<site>
-			<id>repository.local.release-site</id>
-			<name>CN Consult Website</name>
-			<url>
-				scpexe://mvn.cn-consult.dk/var/lib/mvn/release-site/${project.artifactId}/${project.version}
-			</url>
-		</site>
-	</distributionManagement>
--->
 
 	<dependencies>
 
 		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Optional -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency>
-
-		<!-- Test dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<artifactId>spring-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
