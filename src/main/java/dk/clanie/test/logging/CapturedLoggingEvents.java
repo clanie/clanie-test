@@ -31,7 +31,7 @@ import lombok.NonNull;
 import lombok.Value;
 
 /**
- * Immutable collection of LoggingEvents captured by {@link LogCapturerTest}.
+ * Immutable collection of LoggingEvents captured by {@link LogCapturer}.
  * 
  * @author Claus Nielsen
  */
@@ -80,7 +80,7 @@ public class CapturedLoggingEvents {
 	/**
 	 * Gets messages from all LoggingEvents which satisfies the supplied Predicate.
 	 * 
-	 * @param matcher
+	 * @param predicate
 	 * @return List&lt;String&gt;
 	 */
 	public List<String> getMessages(Predicate<ILoggingEvent> predicate) {
